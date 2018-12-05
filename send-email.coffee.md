@@ -1,7 +1,4 @@
     mailer = require 'nodemailer'
-    path = require 'path'
-    Promise = require 'bluebird'
-    seem = require 'seem'
     smtpTransport = require 'nodemailer-smtp-transport'
     {markdown} = require 'nodemailer-markdown'
 
@@ -23,11 +20,10 @@
         transport.use 'compile', markdown
           gfm: true
           tables: true
-      Promise.promisifyAll transport
       transport
 
     send_mail = (cfg,email_options) ->
       sender = email_options.from
-      build_transport(cfg,sender).sendMailAsync email_options
+      build_transport(cfg,sender).sendMail email_options
 
     module.exports = {send_mail,build_transport}
