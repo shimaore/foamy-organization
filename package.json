@@ -1,6 +1,6 @@
 {
   "name": "foamy-organization",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Data streaming tools for CCNQ",
   "main": "send-email.js",
   "scripts": {
