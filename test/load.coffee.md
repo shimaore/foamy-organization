@@ -30,4 +30,4 @@
         try
           await r
         catch error
-        error.should.have.property 'message', 'getaddrinfo ENOTFOUND smtp.example.com smtp.example.com:25'
+        error.should.have.property 'message', 'getaddrinfo ENOTFOUND smtp.example.com'
